@@ -14,18 +14,18 @@ namespace WorkoutProject
             Dumbbell dumbbellOne = dumbbellFactory.createDumbbell(100);
             Dumbbell dumbbellTwo = dumbbellFactory.createDumbbell(25);
 
-            HeavyLiftWeightBehavior heavyLiftWeight = new HeavyLiftWeightBehavior();
-            LightLiftWeightBehavior lightLiftWeight = new LightLiftWeightBehavior();
+            CompoundLiftWeightBehavior compoundLiftWeight = new CompoundLiftWeightBehavior();
+            AccessoryLiftWeightBehavior accessoryLiftWeight = new AccessoryLiftWeightBehavior();
 
             Max max = Max.Instance;
             max.Description();
 
-            Workout workout = new Workout(heavyLiftWeight);
+            Workout workout = new Workout(compoundLiftWeight);
             
             max.LiftWeights(workout, dumbbellOne);
             max.LiftWeights(workout, dumbbellTwo);
 
-            workout = new Workout(lightLiftWeight);
+            workout = new Workout(accessoryLiftWeight);
 
             max.LiftWeights(workout, dumbbellTwo);
         }
