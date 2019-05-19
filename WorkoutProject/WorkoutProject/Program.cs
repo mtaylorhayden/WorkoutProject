@@ -7,7 +7,11 @@ namespace WorkoutProject
     {
         static void Main(string[] args)
         {
-            Dumbbell d = new HeavyDumbbell(100);
+            DumbbellFactory dumbbellFactory = new DumbbellFactory();
+
+            Dumbbell dumbbell = dumbbellFactory.createDumbbell(100);
+            Dumbbell dumbbellTwo = dumbbellFactory.createDumbbell(25);
+
         }
     }
 }

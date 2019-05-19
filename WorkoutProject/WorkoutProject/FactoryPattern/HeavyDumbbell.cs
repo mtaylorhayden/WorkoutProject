@@ -22,6 +22,7 @@ namespace WorkoutProject
         public HeavyDumbbell(double weight)
         {
             this.weight = weight;
+            Console.WriteLine("A heavy dumbbell!");
         }
 
         /// <summary>

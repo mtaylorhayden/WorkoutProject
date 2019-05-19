@@ -10,11 +10,6 @@ namespace WorkoutProject.FactoryPattern
     public abstract class Dumbbell
     {
         /// <summary>
-        /// The weight of the dumbbell.
-        /// </summary>
-        private double weight;
-
-        /// <summary>
         /// Gets the weight of the dumbbell.
         /// </summary>
         public abstract double Weight { get; }
