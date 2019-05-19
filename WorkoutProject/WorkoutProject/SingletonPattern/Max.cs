@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WorkoutProject.FactoryPattern;
 
 namespace WorkoutProject.StrategyPattern
 {
@@ -23,6 +24,9 @@ namespace WorkoutProject.StrategyPattern
         /// The height of Max.
         /// </summary>
         private double height = 5.11;
+
+
+        private Workout workout;
 
         /// <summary>
         /// Initializes a new instance of the Max class.
@@ -52,6 +56,15 @@ namespace WorkoutProject.StrategyPattern
         public override void Description()
         {
             Console.WriteLine("Max wants to lift some weights!");
+        }
+
+        /// <summary>
+        /// The method used so Max can lift some weights.
+        /// </summary>
+        public void LiftWeights(Workout workout, Dumbbell dumbbell)
+        {
+            this.workout = workout;
+            this.workout.GoLift(dumbbell);
         }
     }
 }

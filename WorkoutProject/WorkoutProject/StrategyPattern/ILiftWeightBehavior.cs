@@ -14,6 +14,6 @@ namespace WorkoutProject
         /// The method used to lift weights.
         /// </summary>
         /// <param name="dumbell">The dumbbell being lifted.</param>
-        void LiftWeights(Dumbbell dumbell);
+        string LiftWeights(Dumbbell dumbell);
     }
 }

@@ -14,9 +14,11 @@ namespace WorkoutProject
         /// Lifts the weights in a heavy manner.
         /// </summary>
         /// <param name="dumbell">The dumbbell being lifted.</param>
-        public void LiftWeights(Dumbbell dumbell)
+        public string LiftWeights(Dumbbell dumbell)
         {
-            Console.Write("Lifts heavier dumbbells");
+            string phrase = "doing compound movements with dumbbells that weigh " + dumbell.Weight;
+
+            return phrase;
         }
     }
 }

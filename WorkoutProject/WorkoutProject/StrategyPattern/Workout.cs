@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WorkoutProject.FactoryPattern;
 
 namespace WorkoutProject
 {
@@ -21,6 +22,17 @@ namespace WorkoutProject
         public Workout(ILiftWeightBehavior liftWeightBehavior)
         {
             this.liftWeightBehavior = liftWeightBehavior;
+        }
+
+        /// <summary>
+        /// The method used to lift dumbbells in a certain way.
+        /// </summary>
+        /// <param name="dumbbell">The dumbbells being used to workout with.</param>
+        public void GoLift(Dumbbell dumbbell)
+        {
+            string phrase = this.liftWeightBehavior.LiftWeights(dumbbell);
+
+            Console.WriteLine("Working out by " + phrase);
         }
     }
 }
