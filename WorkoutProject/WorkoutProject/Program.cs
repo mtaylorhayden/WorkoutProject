@@ -1,5 +1,6 @@
 ﻿using System;
 using WorkoutProject.FactoryPattern;
+using WorkoutProject.StrategyPattern;
 
 namespace WorkoutProject
 {
@@ -12,6 +13,8 @@ namespace WorkoutProject
             Dumbbell dumbbell = dumbbellFactory.createDumbbell(100);
             Dumbbell dumbbellTwo = dumbbellFactory.createDumbbell(25);
 
+            Max max = Max.Instance;
+            max.Description();
         }
     }
 }
