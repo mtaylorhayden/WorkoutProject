@@ -1,4 +1,5 @@
 ﻿using System;
+using WorkoutProject.FactoryPattern;
 
 namespace WorkoutProject
 {
@@ -6,7 +7,7 @@ namespace WorkoutProject
     {
         static void Main(string[] args)
         {
-
+            Dumbbell d = new HeavyDumbbell(100);
         }
     }
 }
