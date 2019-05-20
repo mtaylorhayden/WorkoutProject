@@ -1,6 +1,7 @@
 ﻿using System;
 using WorkoutProject.FactoryPattern;
 using WorkoutProject.StrategyPattern;
+using WorkoutProject.TemplatePattern;
 
 namespace WorkoutProject
 {
@@ -28,6 +29,16 @@ namespace WorkoutProject
             workout = new Workout(accessoryLiftWeight);
 
             max.LiftWeights(workout, dumbbellTwo);
+
+            Console.WriteLine("Please enter the heaviest weight you can lift 3-5 times.");
+
+            double userInput = Convert.ToDouble(Console.ReadLine());
+
+            StrengthTraining test = new StrengthTraining(userInput);
+            double answer = test.CalculateFormula();
+
+            Console.WriteLine(Math.Round(answer, 0) + "lbs");
+
         }
     }
 }
