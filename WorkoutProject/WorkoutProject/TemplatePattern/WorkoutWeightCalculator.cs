@@ -25,12 +25,21 @@ namespace WorkoutProject.TemplatePattern
         public abstract double Weight { get; set; }
 
         /// <summary>
+        /// Finishes off the formula.
+        /// </summary>
+        /// <param name="answer"> The answer from CalculateFormula().</param>
+        /// <returns>The solution to the formula.</returns>
+        public abstract double AssistFormula(double answer);
+
+        /// <summary>
         /// The formula used to calculate your workout weights.
         /// </summary>
         /// <returns>Your workout weight.</returns>
         public double CalculateFormula()
         {
             double answer = (Weight * Factor) + Addend;
+
+            answer = this.AssistFormula(answer);
 
             return answer;
         }

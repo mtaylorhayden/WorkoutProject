@@ -24,7 +24,10 @@ namespace WorkoutProject.TemplatePattern
         /// </summary>
         private readonly double addend = 0.6998;
 
-
+        /// <summary>
+        /// Initializes a new instance of the StrengthTraining class. 
+        /// </summary>
+        /// <param name="Weight">The heaviest weight you can lift 3-5 times.</param>
         public StrengthTraining(double Weight)
         {
             this.weight = Weight;
@@ -71,11 +74,16 @@ namespace WorkoutProject.TemplatePattern
             }
         }
 
-        //public double CalculateFormula()
-        //{
-        //    double answer = (Weight * Factor) + Addend;
+        /// <summary>
+        /// Multiplies the number by the specific number needed to calculate strength.
+        /// </summary>
+        /// <param name="answer">The result of the formula</param>
+        /// <returns>The solution to the formula.</returns>
+        public override double AssistFormula(double answer)
+        {
+            double solution = answer * .9;
 
-        //    return answer;
-        //}
+            return solution;
+        }
     }
 }

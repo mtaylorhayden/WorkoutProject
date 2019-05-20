@@ -34,10 +34,10 @@ namespace WorkoutProject
 
             double userInput = Convert.ToDouble(Console.ReadLine());
 
-            StrengthTraining test = new StrengthTraining(userInput);
+            WorkoutWeightCalculator test = new StrengthTraining(userInput);
             double answer = test.CalculateFormula();
 
-            Console.WriteLine(Math.Round(answer, 0) + "lbs");
+            Console.WriteLine(Math.Round(answer, 0) + "lbs is the weight you should be training at for strength.");
 
         }
     }
